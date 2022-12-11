@@ -15,9 +15,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "histo_carbs")
 public class HistoCarb implements Serializable {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id

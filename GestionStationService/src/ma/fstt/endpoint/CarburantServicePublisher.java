@@ -7,7 +7,7 @@ import ma.fstt.ws.CarburantServiceImpl;
 public class CarburantServicePublisher {
 
 	public static void main(String[] args) {
-		Endpoint.publish("http://localhost:7779/service/station", new CarburantServiceImpl());
+		Endpoint.publish("http://localhost:7778/service/carburant", new CarburantServiceImpl());
 	}
 
 }

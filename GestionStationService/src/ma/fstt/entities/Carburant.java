@@ -15,9 +15,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "carburants")
 public class Carburant implements Serializable {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id

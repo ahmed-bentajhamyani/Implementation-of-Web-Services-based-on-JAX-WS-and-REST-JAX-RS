@@ -10,8 +10,13 @@ import ma.fstt.persistence.CarburantOperations;
 
 @WebService(endpointInterface = "ma.fstt.ws.CarburantService")
 public class CarburantServiceImpl implements CarburantService {
-	@Inject
+	// @Inject
 	CarburantOperations carburantOperations;
+
+	public CarburantServiceImpl() {
+		super();
+		carburantOperations = new CarburantOperations();
+	}
 
 	@Override
 	public List<Carburant> getCarburants() {
