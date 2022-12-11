@@ -2,7 +2,7 @@ package ma.fstt.endpoint;
 
 import javax.xml.ws.Endpoint;
 
-import ma.fstt.ws.CarburantServiceImpl;
+import ma.fstt.ws.carburant.CarburantServiceImpl;
 
 public class CarburantServicePublisher {
 

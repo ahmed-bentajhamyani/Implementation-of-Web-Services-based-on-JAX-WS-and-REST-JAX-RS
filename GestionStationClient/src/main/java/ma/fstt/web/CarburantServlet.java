@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ma.fstt.ws.Carburant;
-import ma.fstt.ws.CarburantService;
-import ma.fstt.ws.CarburantServiceImplService;
+import ma.fstt.ws.carburant.Carburant;
+import ma.fstt.ws.carburant.CarburantService;
+import ma.fstt.ws.carburant.CarburantServiceImplService;
 
 @WebServlet("/carburant")
 public class CarburantServlet extends HttpServlet {

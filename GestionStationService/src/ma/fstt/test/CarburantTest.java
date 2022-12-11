@@ -5,7 +5,7 @@ import java.net.URL;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 
-import ma.fstt.ws.CarburantService;
+import ma.fstt.ws.carburant.CarburantService;
 
 public class CarburantTest {
 	public static void main(String[] args) throws Exception {

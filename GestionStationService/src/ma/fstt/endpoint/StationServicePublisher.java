@@ -2,7 +2,7 @@ package ma.fstt.endpoint;
 
 import javax.xml.ws.Endpoint;
 
-import ma.fstt.ws.StationServiceImpl;
+import ma.fstt.ws.station.StationServiceImpl;
 
 public class StationServicePublisher {
 	public static void main(String[] args) {
