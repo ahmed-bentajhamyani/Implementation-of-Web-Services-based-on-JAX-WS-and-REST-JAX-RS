@@ -6,13 +6,18 @@ import javax.inject.Inject;
 import javax.jws.WebService;
 
 import ma.fstt.entities.Station;
+import ma.fstt.persistence.CarburantOperations;
 import ma.fstt.persistence.StationOperations;
 
 @WebService(endpointInterface = "ma.fstt.ws.station.StationService")
 public class StationServiceImpl implements StationService {
 
-	@Inject
 	StationOperations stationOperations;
+
+	public StationServiceImpl() {
+		super();
+		stationOperations = new StationOperations();
+	}
 
 	@Override
 	public List<Station> getStations() {

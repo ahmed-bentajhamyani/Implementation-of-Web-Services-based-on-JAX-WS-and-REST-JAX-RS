@@ -17,7 +17,7 @@ public class StationOperations {
 
 	@SuppressWarnings("unchecked")
 	public List<Station> getAllStations() {
-		Query queryObj = entityMgrObj.createQuery("SELECT s FROM Station c");
+		Query queryObj = entityMgrObj.createQuery("SELECT s FROM Station s");
 		List<Station> stations = queryObj.getResultList();
 		if (stations != null && stations.size() > 0) {
 			return stations;
