@@ -1,1 +1,1 @@
-# web-services-based-on-JAX-WS-and-REST-JAX-RS
+# Web Services based on JAX-WS and REST JAX-RS
