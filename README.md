@@ -21,7 +21,60 @@ This is an implementation of a variety of Web Services based on several architec
 
 [Grouping the two projects into an Enterprise Application Projecty](#grouping-the-two-projects-into-an-enterprise-application-project)
 
+## Class Diagram
+
+<p align="center">
+	<img width="936" alt="Class Diag" src="https://user-images.githubusercontent.com/101653735/207182904-8c7fbd7d-6ec9-4445-a9b2-a460b8263f40.png">
+</p>
+
+## Database Schema
+
+<p align="center">
+	<img width="791" alt="Schema bdd" src="https://user-images.githubusercontent.com/101653735/207183227-8d667ba0-1e71-45b3-b86f-b50980b98e74.png">
+</p>
+
 ## Part 1
+
+In the ```pom.xml``` file we add the dependencies:
+
+```
+<dependencies>
+	<dependency>
+		<groupId>org.glassfish.metro</groupId>
+		<artifactId>metro-project</artifactId>
+		<version>2.4.0</version>
+		<type>pom</type>
+	</dependency>
+	<dependency>
+		<groupId>com.sun.xml.ws</groupId>
+		<artifactId>rt</artifactId>
+		<version>2.3.2</version>
+	</dependency>
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>servlet-api</artifactId>
+		<version>2.3</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>8.0.22</version>
+	</dependency>
+	<dependency>
+		<groupId>org.eclipse.persistence</groupId>
+		<artifactId>eclipselink</artifactId>
+		<version>2.5.1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.eclipse.persistence</groupId>
+		<artifactId>javax.persistence</artifactId>
+		<version>2.0.0</version>
+	</dependency>
+</dependencies>
+```
+
+### Etudiants List
 
 We installed the JBoss Tools plugin from the Eclipse Marketplace:
 
@@ -106,43 +159,5 @@ We added a new etudiant:
 
 <p align="center">
 	<img width="960" alt="2" src="https://user-images.githubusercontent.com/101653735/205465208-6ccdb91a-35a3-4767-bd97-75ac9de9d7fb.png">
-</p>
-
-And after we click on save:
-
-<p align="center">
-	<img width="960" alt="3" src="https://user-images.githubusercontent.com/101653735/205465335-424662a5-7d96-4ef9-b00d-0d6079d2738e.png">
-</p>
-
-We can update or delete an etudiant.
-
-### Update Etudiant
-
-We click on edit link:
-
-<p align="center">
-	<img width="960" alt="4" src="https://user-images.githubusercontent.com/101653735/205465318-14ae3444-5152-4048-96b5-5b90817fc47e.png">
-</p>
-
-And we click on save:
-
-<p align="center">
-	<img width="960" alt="5" src="https://user-images.githubusercontent.com/101653735/205465361-c27cce0c-ec75-4849-85b8-5d91185b83f5.png">
-</p>
-
-### Delete Etudiant
-
-We click on delete link to delete the etudiant we just create:
-
-<p align="center">
-	<img width="960" alt="1" src="https://user-images.githubusercontent.com/101653735/205465375-18ab7b29-935d-4f72-8b9d-9eca38b830c0.png">
-</p>
-
-## Grouping the two projects into an Enterprise Application Project
-
-We grouped the two projects into an Enterprise Application Project and we deployed it in WildFly successefully:
-
-<p align="center">
-	<img width="960" alt="Deployement" src="https://user-images.githubusercontent.com/101653735/205942982-37768dd4-d16a-4614-a395-6af1e0398e49.png">
 </p>
 
