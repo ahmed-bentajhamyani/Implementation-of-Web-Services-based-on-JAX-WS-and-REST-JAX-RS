@@ -6,24 +6,13 @@
 <title>Gestion des Stations</title>
 </head>
 <body>
+	<jsp:include page="Index.jsp" />
 	<div align="center">
+		<h1>Gestion des Carburants</h1>
 		<h2>
-			<a href="/GestionStationClient/carburant?action=list">List of
-				Carburants</a> &nbsp;&nbsp;&nbsp; <a
-				href="/GestionStationClient/commande?action=list">List of
-				Commandes</a> &nbsp;&nbsp;&nbsp; <a
-				href="/GestionStationClient/client?action=list">List of Clients</a>
-			&nbsp;&nbsp;&nbsp; <a
-				href="/GestionStationClient/lignecmd?action=list">List of Ligne
-				Commandes</a>
-		</h2>
-
-		<h1>Carburants Management</h1>
-		<h2>
-			<a href="/GestionStationClient/Carburant?action=new">Add New
-				Carburant</a> &nbsp;&nbsp;&nbsp; <a
-				href="/GestionStationClient/Carburant?action=list">List of
-				Carburants</a>
+			<a href="/GestionStationClient/carburant?action=new">Ajouter
+				Nouveau Carburant</a> &nbsp;&nbsp;&nbsp; <a
+				href="/GestionStationClient/carburant">List des Carburants</a>
 		</h2>
 
 		<c:if test="${carburant != null}">

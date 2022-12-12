@@ -30,6 +30,8 @@ public class ObjectFactory {
     private final static QName _FindHistoCarbResponse_QNAME = new QName("http://histocarb.ws.fstt.ma/", "findHistoCarbResponse");
     private final static QName _GetHistoCarbs_QNAME = new QName("http://histocarb.ws.fstt.ma/", "getHistoCarbs");
     private final static QName _GetHistoCarbsResponse_QNAME = new QName("http://histocarb.ws.fstt.ma/", "getHistoCarbsResponse");
+    private final static QName _GetTwoCarburant_QNAME = new QName("http://histocarb.ws.fstt.ma/", "getTwoCarburant");
+    private final static QName _GetTwoCarburantResponse_QNAME = new QName("http://histocarb.ws.fstt.ma/", "getTwoCarburantResponse");
     private final static QName _PersistHistoCarb_QNAME = new QName("http://histocarb.ws.fstt.ma/", "persistHistoCarb");
     private final static QName _PersistHistoCarbResponse_QNAME = new QName("http://histocarb.ws.fstt.ma/", "persistHistoCarbResponse");
     private final static QName _UpdateHistoCarb_QNAME = new QName("http://histocarb.ws.fstt.ma/", "updateHistoCarb");
@@ -91,6 +93,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetTwoCarburant }
+     * 
+     */
+    public GetTwoCarburant createGetTwoCarburant() {
+        return new GetTwoCarburant();
+    }
+
+    /**
+     * Create an instance of {@link GetTwoCarburantResponse }
+     * 
+     */
+    public GetTwoCarburantResponse createGetTwoCarburantResponse() {
+        return new GetTwoCarburantResponse();
+    }
+
+    /**
      * Create an instance of {@link PersistHistoCarb }
      * 
      */
@@ -136,14 +154,6 @@ public class ObjectFactory {
      */
     public Carburant createCarburant() {
         return new Carburant();
-    }
-
-    /**
-     * Create an instance of {@link Date }
-     * 
-     */
-    public Date createDate() {
-        return new Date();
     }
 
     /**
@@ -230,6 +240,32 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://histocarb.ws.fstt.ma/", name = "getHistoCarbsResponse")
     public JAXBElement<GetHistoCarbsResponse> createGetHistoCarbsResponse(GetHistoCarbsResponse value) {
         return new JAXBElement<GetHistoCarbsResponse>(_GetHistoCarbsResponse_QNAME, GetHistoCarbsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetTwoCarburant }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetTwoCarburant }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://histocarb.ws.fstt.ma/", name = "getTwoCarburant")
+    public JAXBElement<GetTwoCarburant> createGetTwoCarburant(GetTwoCarburant value) {
+        return new JAXBElement<GetTwoCarburant>(_GetTwoCarburant_QNAME, GetTwoCarburant.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetTwoCarburantResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetTwoCarburantResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://histocarb.ws.fstt.ma/", name = "getTwoCarburantResponse")
+    public JAXBElement<GetTwoCarburantResponse> createGetTwoCarburantResponse(GetTwoCarburantResponse value) {
+        return new JAXBElement<GetTwoCarburantResponse>(_GetTwoCarburantResponse_QNAME, GetTwoCarburantResponse.class, null, value);
     }
 
     /**

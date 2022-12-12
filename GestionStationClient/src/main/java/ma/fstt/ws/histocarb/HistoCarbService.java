@@ -1,6 +1,7 @@
 
 package ma.fstt.ws.histocarb;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.jws.WebMethod;
@@ -8,6 +9,7 @@ import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.ws.Action;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
@@ -28,6 +30,27 @@ public interface HistoCarbService {
 
     /**
      * 
+     * @param arg3
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "persistHistoCarb", targetNamespace = "http://histocarb.ws.fstt.ma/", className = "ma.fstt.ws.histocarb.PersistHistoCarb")
+    @ResponseWrapper(localName = "persistHistoCarbResponse", targetNamespace = "http://histocarb.ws.fstt.ma/", className = "ma.fstt.ws.histocarb.PersistHistoCarbResponse")
+    @Action(input = "http://histocarb.ws.fstt.ma/HistoCarbService/persistHistoCarbRequest", output = "http://histocarb.ws.fstt.ma/HistoCarbService/persistHistoCarbResponse")
+    public void persistHistoCarb(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Date arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        float arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        Long arg2,
+        @WebParam(name = "arg3", targetNamespace = "")
+        Long arg3);
+
+    /**
+     * 
      * @param arg0
      */
     @WebMethod
@@ -40,6 +63,28 @@ public interface HistoCarbService {
 
     /**
      * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.util.List<ma.fstt.ws.histocarb.HistoCarb>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTwoCarburant", targetNamespace = "http://histocarb.ws.fstt.ma/", className = "ma.fstt.ws.histocarb.GetTwoCarburant")
+    @ResponseWrapper(localName = "getTwoCarburantResponse", targetNamespace = "http://histocarb.ws.fstt.ma/", className = "ma.fstt.ws.histocarb.GetTwoCarburantResponse")
+    @Action(input = "http://histocarb.ws.fstt.ma/HistoCarbService/getTwoCarburantRequest", output = "http://histocarb.ws.fstt.ma/HistoCarbService/getTwoCarburantResponse")
+    public List<HistoCarb> getTwoCarburant(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        Date arg1);
+
+    /**
+     * 
+     * @param arg3
+     * @param arg2
+     * @param arg4
+     * @param arg1
      * @param arg0
      */
     @WebMethod
@@ -48,7 +93,15 @@ public interface HistoCarbService {
     @Action(input = "http://histocarb.ws.fstt.ma/HistoCarbService/updateHistoCarbRequest", output = "http://histocarb.ws.fstt.ma/HistoCarbService/updateHistoCarbResponse")
     public void updateHistoCarb(
         @WebParam(name = "arg0", targetNamespace = "")
-        HistoCarb arg0);
+        Long arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        Date arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        float arg2,
+        @WebParam(name = "arg3", targetNamespace = "")
+        Long arg3,
+        @WebParam(name = "arg4", targetNamespace = "")
+        Long arg4);
 
     /**
      * 
@@ -61,18 +114,6 @@ public interface HistoCarbService {
     @ResponseWrapper(localName = "getHistoCarbsResponse", targetNamespace = "http://histocarb.ws.fstt.ma/", className = "ma.fstt.ws.histocarb.GetHistoCarbsResponse")
     @Action(input = "http://histocarb.ws.fstt.ma/HistoCarbService/getHistoCarbsRequest", output = "http://histocarb.ws.fstt.ma/HistoCarbService/getHistoCarbsResponse")
     public List<HistoCarb> getHistoCarbs();
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "persistHistoCarb", targetNamespace = "http://histocarb.ws.fstt.ma/", className = "ma.fstt.ws.histocarb.PersistHistoCarb")
-    @ResponseWrapper(localName = "persistHistoCarbResponse", targetNamespace = "http://histocarb.ws.fstt.ma/", className = "ma.fstt.ws.histocarb.PersistHistoCarbResponse")
-    @Action(input = "http://histocarb.ws.fstt.ma/HistoCarbService/persistHistoCarbRequest", output = "http://histocarb.ws.fstt.ma/HistoCarbService/persistHistoCarbResponse")
-    public void persistHistoCarb(
-        @WebParam(name = "arg0", targetNamespace = "")
-        HistoCarb arg0);
 
     /**
      * 

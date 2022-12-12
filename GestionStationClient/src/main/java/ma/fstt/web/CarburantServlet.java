@@ -100,7 +100,7 @@ public class CarburantServlet extends HttpServlet {
 
 		Carburant newCarburant = new Carburant(nom, description);
 		carburantService.persistCarburant(newCarburant);
-		response.sendRedirect("/GestionStationClient/Carburant?action=list");
+		response.sendRedirect("/GestionStationClient/carburant");
 	}
 
 	private void updateCarburant(HttpServletRequest request, HttpServletResponse response)
@@ -111,7 +111,7 @@ public class CarburantServlet extends HttpServlet {
 
 		Carburant newCarburant = new Carburant(carburantId, nom, description);
 		carburantService.updateCarburant(newCarburant);
-		response.sendRedirect("/GestionStationClient/Carburant?action=list");
+		response.sendRedirect("/GestionStationClient/carburant");
 	}
 
 	private void deleteCarburant(HttpServletRequest request, HttpServletResponse response)
@@ -120,7 +120,7 @@ public class CarburantServlet extends HttpServlet {
 
 		Carburant Carburant = carburantService.findCarburant(carburantId);
 		carburantService.deleteCarburant(Carburant);
-		response.sendRedirect("/GestionStationClient/Carburant?action=list");
+		response.sendRedirect("/GestionStationClient/carburant");
 	}
 
 }

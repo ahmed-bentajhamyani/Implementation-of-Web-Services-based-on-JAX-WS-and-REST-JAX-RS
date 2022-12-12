@@ -1,5 +1,6 @@
 package ma.fstt.persistence;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -8,6 +9,7 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 import ma.fstt.entities.HistoCarb;
+import ma.fstt.entities.Station;
 
 public class HistoCarbOperations {
 	private static final String PERSISTENCE_UNIT_NAME = "unit";
@@ -31,6 +33,19 @@ public class HistoCarbOperations {
 		entityMgrObj.refresh(histoCarb);
 		if (histoCarb != null) {
 			return histoCarb;
+		} else {
+			return null;
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<HistoCarb> getHistoCarbByDateAndStation(Station station, Date date) {
+		Query queryObj = entityMgrObj
+				.createQuery("SELECT h FROM HistoCarb h WHERE h.station = :id AND h.date = :date")
+				.setParameter("id", station).setParameter("date", date);
+		List<HistoCarb> histoCarbs = queryObj.getResultList();
+		if (histoCarbs != null && histoCarbs.size() > 0) {
+			return histoCarbs;
 		} else {
 			return null;
 		}

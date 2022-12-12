@@ -11,7 +11,7 @@ public class CarburantTest {
 	public static void main(String[] args) throws Exception {
 
 		URL url = new URL("http://localhost:7778/service/carburant?wsdl");
-		QName qname = new QName("http://ws.fstt.ma/", "CarburantServiceImplService");
+		QName qname = new QName("http://carburant.ws.fstt.ma/", "CarburantServiceImplService");
 		Service service = Service.create(url, qname);
 
 		CarburantService carburant = service.getPort(CarburantService.class);

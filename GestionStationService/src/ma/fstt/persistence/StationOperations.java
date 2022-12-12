@@ -36,6 +36,16 @@ public class StationOperations {
 		}
 	}
 
+	public Station getStationByName(String nom) {
+		Query queryObj = entityMgrObj.createQuery("SELECT s FROM Station s WHERE s.nom = :nom").setParameter("nom", nom);
+		Station station = (Station) queryObj.getResultList().get(0);
+		if (station != null) {
+			return station;
+		} else {
+			return null;
+		}
+	}
+
 	public String persistStation(Station station) {
 		if (!transactionObj.isActive()) {
 			transactionObj.begin();

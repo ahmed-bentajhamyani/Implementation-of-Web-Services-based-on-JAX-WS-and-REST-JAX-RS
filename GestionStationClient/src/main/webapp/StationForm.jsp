@@ -6,24 +6,15 @@
 <title>Gestion des Stations</title>
 </head>
 <body>
+	<jsp:include page="Index.jsp" />
 	<div align="center">
-		<h2>
-			<a href="/GestionStationClient/station?action=list">List of
-				Stations</a> &nbsp;&nbsp;&nbsp; <a
-				href="/GestionStationClient/commande?action=list">List of
-				Commandes</a> &nbsp;&nbsp;&nbsp; <a
-				href="/GestionStationClient/client?action=list">List of Clients</a>
-			&nbsp;&nbsp;&nbsp; <a
-				href="/GestionStationClient/lignecmd?action=list">List of Ligne
-				Commandes</a>
-		</h2>
-
-		<h1>Stations Management</h1>
+		<h1>Gestion des Stations</h1>
 		<h2>
 			<a href="/GestionStationClient/station?action=new">Add New
 				Station</a> &nbsp;&nbsp;&nbsp; <a
-				href="/GestionStationClient/station?action=list">List of
+				href="/GestionStationClient/station">List of
 				Stations</a>
+
 		</h2>
 
 		<c:if test="${station != null}">
@@ -31,8 +22,7 @@
 				method="post">
 		</c:if>
 		<c:if test="${station == null}">
-			<form action="/GestionStationClient/station?action=add"
-				method="post">
+			<form action="/GestionStationClient/station?action=add" method="post">
 		</c:if>
 		<table border="1" cellpadding="5">
 			<caption>
@@ -59,7 +49,7 @@
 				<td><input type="text" name="ville" size="45"
 					value="<c:out value='${station.ville}' />" /></td>
 			</tr>
-            <tr>
+			<tr>
 				<th>Adresse:</th>
 				<td><input type="text" name="adresse" size="45"
 					value="<c:out value='${station.adresse}' />" /></td>

@@ -26,4 +26,7 @@ public interface StationService {
 
 	@WebMethod
 	public void deleteStation(Station station);
+
+	@WebMethod
+	public Station getStationByName(String nom);
 }

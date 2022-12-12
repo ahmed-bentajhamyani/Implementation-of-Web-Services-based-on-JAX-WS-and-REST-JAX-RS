@@ -6,22 +6,14 @@
 <title>Gestion des Stations</title>
 </head>
 <body>
-	<center>
-		<h2>
-			<a href="/GestionStationClient/carburant?action=list">List of Carburants</a>
-			&nbsp;&nbsp;&nbsp; <a href="/GestionStationClient/commande?action=list">List of
-				Commandes</a> &nbsp;&nbsp;&nbsp; <a href="/GestionStationClient/client?action=list">List
-				of Clients</a> &nbsp;&nbsp;&nbsp; <a href="/GestionStationClient/lignecmd?action=list">List
-				of Ligne Commandes</a>
-		</h2>
-		<h1>carburant Management</h1>
-		<h2>
-			<a href="/GestionStationClient/carburant?action=new">Add New carburant</a> &nbsp;&nbsp;&nbsp;
-			<a href="/GestionStationClient/carburant?action=list">List of Carburants</a>
-
-		</h2>
-	</center>
+	<jsp:include page="Index.jsp" />
 	<div align="center">
+		<h1>Gestion des Carburants</h1>
+		<h2>
+			<a href="/GestionStationClient/carburant?action=new">Ajouter
+				Nouveau Carburant</a> &nbsp;&nbsp;&nbsp; <a
+				href="/GestionStationClient/carburant">List des Carburants</a>
+		</h2>
 		<table border="1" cellpadding="5">
 			<caption>
 				<h2>List of Carburants</h2>
@@ -30,6 +22,7 @@
 				<th>ID</th>
 				<th>Nom</th>
 				<th>Description</th>
+				<th>Actions</th>
 			</tr>
 			<c:forEach var="carburant" items="${listCarburant}">
 				<tr>

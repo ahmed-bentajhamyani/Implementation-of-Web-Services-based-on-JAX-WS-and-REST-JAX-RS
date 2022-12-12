@@ -28,6 +28,12 @@ public class StationServiceImpl implements StationService {
 	public Station findStation(Long id) {
 		return stationOperations.findStation(id);
 	}
+	
+	@Override
+	public Station getStationByName(String nom) {
+		return stationOperations.getStationByName(nom);
+	}
+
 
 	@Override
 	public void persistStation(Station station) {

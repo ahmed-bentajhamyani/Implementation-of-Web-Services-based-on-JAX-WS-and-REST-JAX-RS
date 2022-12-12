@@ -100,7 +100,7 @@ public class StationServlet extends HttpServlet {
 
 		Station newStation = new Station(nom, ville, adresse);
 		stationService.persistStation(newStation);
-		response.sendRedirect("/GestionStationClient/station?action=list");
+		response.sendRedirect("/GestionStationClient/station");
 	}
 
 	private void updateStation(HttpServletRequest request, HttpServletResponse response)
@@ -112,7 +112,7 @@ public class StationServlet extends HttpServlet {
 
 		Station newStation = new Station(stationId, nom, ville, adresse);
 		stationService.updateStation(newStation);
-		response.sendRedirect("/GestionStationClient/station?action=list");
+		response.sendRedirect("/GestionStationClient/station");
 	}
 
 	private void deleteStation(HttpServletRequest request, HttpServletResponse response)
@@ -121,7 +121,7 @@ public class StationServlet extends HttpServlet {
 
 		Station station = stationService.findStation(stationId);
 		stationService.deleteStation(station);
-		response.sendRedirect("/GestionStationClient/station?action=list");
+		response.sendRedirect("/GestionStationClient/station");
 	}
 
 }

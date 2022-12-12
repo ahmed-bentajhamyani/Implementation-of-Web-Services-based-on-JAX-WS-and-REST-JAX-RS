@@ -1,5 +1,6 @@
 package ma.fstt.ws.histocarb;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.jws.WebMethod;
@@ -19,11 +20,14 @@ public interface HistoCarbService {
 	public HistoCarb findHistoCarb(Long id);
 
 	@WebMethod
-	public void persistHistoCarb(HistoCarb histoCarb);
+	public void persistHistoCarb(Date date, float prix, Long carburantId, Long stationId);
 
 	@WebMethod
-	public void updateHistoCarb(HistoCarb histoCarb);
+	public void updateHistoCarb(Long histoCarbId, Date date, float prix, Long carburantId, Long stationId);
 
 	@WebMethod
 	public void deleteHistoCarb(HistoCarb histoCarb);
+
+	@WebMethod
+	public List<HistoCarb> getTwoCarburant(String stationNom, Date date);
 }

@@ -1,9 +1,13 @@
 
 package ma.fstt.ws.histocarb;
 
+import java.util.Date;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -17,7 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="carburant" type="{http://histocarb.ws.fstt.ma/}carburant" minOccurs="0"/&gt;
- *         &lt;element name="date" type="{http://histocarb.ws.fstt.ma/}date" minOccurs="0"/&gt;
+ *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
  *         &lt;element name="histoCarbId" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
  *         &lt;element name="prix" type="{http://www.w3.org/2001/XMLSchema}float"/&gt;
  *         &lt;element name="station" type="{http://histocarb.ws.fstt.ma/}station" minOccurs="0"/&gt;
@@ -40,6 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class HistoCarb {
 
     protected Carburant carburant;
+    // @XmlSchemaType(name = "dateTime")
     protected Date date;
     protected long histoCarbId;
     protected float prix;
@@ -74,7 +79,7 @@ public class HistoCarb {
      * 
      * @return
      *     possible object is
-     *     {@link Date }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public Date getDate() {
@@ -86,7 +91,7 @@ public class HistoCarb {
      * 
      * @param value
      *     allowed object is
-     *     {@link Date }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setDate(Date value) {
