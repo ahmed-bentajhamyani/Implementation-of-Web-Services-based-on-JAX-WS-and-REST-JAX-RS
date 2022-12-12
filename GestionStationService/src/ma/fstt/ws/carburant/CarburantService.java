@@ -8,6 +8,7 @@ import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.Style;
 
 import ma.fstt.entities.Carburant;
+import ma.fstt.entities.HistoCarb;
 
 @WebService
 @SOAPBinding(style = Style.DOCUMENT)
