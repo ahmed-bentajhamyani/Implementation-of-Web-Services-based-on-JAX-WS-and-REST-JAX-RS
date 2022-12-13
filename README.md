@@ -49,7 +49,7 @@ The class diagram used to implement this web application composed of two classes
 We create a Java Project to implement the Web Services JAX-WS:
 
 <p align="center">
-	<img width="220" alt="Part 1" src="https://user-images.githubusercontent.com/101653735/207268667-e5a4dd60-91f8-4b08-97a4-cec4c9eb10a6.png">
+	<img width="219" alt="Part 1" src="https://user-images.githubusercontent.com/101653735/207305107-8a3ae70f-91fd-417b-a412-53310cafaeed.png">
 </p>
 
 ### Dependencies Used in this Project
