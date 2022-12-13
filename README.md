@@ -112,6 +112,14 @@ To connect to the database we have to add the  ```persistence.xml``` file in ```
 
 ## Web Services Client
 
+To import the Web Services in this project we use ```wsimport``` command in the terminal:
+
+```
+wsimport.sh -p ma.fstt.ws.station -keep http://localhost:7779/service/station?wsdl
+wsimport.sh -p ma.fstt.ws.carburant -keep http://localhost:7778/service/carburant?wsdl
+wsimport.sh -p ma.fstt.ws.histocarb -keep http://localhost:7777/service/histocarb?wsdl
+```
+
 ### Project Structure
 
 We create a Dynamique Web Project as a Client Project to call all the method of the Web Service:
