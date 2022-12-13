@@ -204,7 +204,7 @@ So we get this list:
 We can compare the price of the two fuel "Gasoil" and "Essence" based on a station and date:
 
 <p align="center">
-	<img width="960" alt="8" src="https://user-images.githubusercontent.com/101653735/207280937-8f869a54-e59a-45a2-9fcf-78652686110d.png">
+	<img width="960" alt="8" src="https://user-images.githubusercontent.com/101653735/207285303-10c1b182-becf-40f4-b5be-a547de30f26d.png">
 </p>
 
 We enter a station name and a date and we get the price of "Gasoil" and "Essence" in this station for a given date:
