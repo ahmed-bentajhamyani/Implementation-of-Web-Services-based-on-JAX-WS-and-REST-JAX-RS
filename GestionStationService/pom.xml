@@ -4,7 +4,6 @@
 	<artifactId>GestionStationService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.glassfish.metro/metro-project -->
 		<dependency>
 			<groupId>org.glassfish.metro</groupId>
 			<artifactId>metro-project</artifactId>
@@ -15,13 +14,6 @@
 			<groupId>com.sun.xml.ws</groupId>
 			<artifactId>rt</artifactId>
 			<version>2.3.2</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.3</version>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -37,12 +29,6 @@
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>javax.persistence</artifactId>
 			<version>2.0.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-			<version>1</version>
 		</dependency>
 	</dependencies>
 	<build>

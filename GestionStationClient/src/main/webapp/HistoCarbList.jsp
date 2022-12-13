@@ -5,7 +5,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
-<title>Gestion des Stations</title>
+<title>Gestion des Histogrames des Carburants</title>
 </head>
 <body>
 	<jsp:include page="Index.jsp" />
@@ -35,9 +35,9 @@
 					<td><fmt:formatDate type="date" value="${histoCarb.date}" pattern="yyyy-MM-dd" /></td>
 					<td><c:out value="${histoCarb.prix}" /></td>
 					<td><a
-						href="/GestionStationClient/histocarb?action=edit&id=<c:out value='${histocarb.histocarbId}' />">Edit</a>
+						href="/GestionStationClient/histocarb?action=edit&id=<c:out value='${histoCarb.histoCarbId}' />">Editer</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a
-						href="/GestionStationClient/histocarb?action=delete&id=<c:out value='${histocarb.histocarbId}' />">Delete</a></td>
+						href="/GestionStationClient/histocarb?action=delete&id=<c:out value='${histoCarb.histoCarbId}' />">Supprimer</a></td>
 				</tr>
 			</c:forEach>
 		</table>

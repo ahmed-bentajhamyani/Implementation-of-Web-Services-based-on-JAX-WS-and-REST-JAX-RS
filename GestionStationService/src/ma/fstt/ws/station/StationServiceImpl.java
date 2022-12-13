@@ -2,11 +2,9 @@ package ma.fstt.ws.station;
 
 import java.util.List;
 
-import javax.inject.Inject;
 import javax.jws.WebService;
 
 import ma.fstt.entities.Station;
-import ma.fstt.persistence.CarburantOperations;
 import ma.fstt.persistence.StationOperations;
 
 @WebService(endpointInterface = "ma.fstt.ws.station.StationService")
@@ -28,12 +26,11 @@ public class StationServiceImpl implements StationService {
 	public Station findStation(Long id) {
 		return stationOperations.findStation(id);
 	}
-	
+
 	@Override
 	public Station getStationByName(String nom) {
 		return stationOperations.getStationByName(nom);
 	}
-
 
 	@Override
 	public void persistStation(Station station) {

@@ -11,9 +11,8 @@
 		<h1>Gestion des Stations</h1>
 		<h2>
 			<a href="/GestionStationClient/station?action=new">Add New
-				Station</a> &nbsp;&nbsp;&nbsp; <a
-				href="/GestionStationClient/station">List of
-				Stations</a>
+				Station</a> &nbsp;&nbsp;&nbsp; <a href="/GestionStationClient/station">List
+				of Stations</a>
 
 		</h2>
 
@@ -28,10 +27,10 @@
 			<caption>
 				<h2>
 					<c:if test="${station != null}">
-                        Edit Station
+                        Editer Station
                     </c:if>
 					<c:if test="${station == null}">
-                        Add New Station
+                        Ajouter Nouveau Station
                     </c:if>
 				</h2>
 			</caption>

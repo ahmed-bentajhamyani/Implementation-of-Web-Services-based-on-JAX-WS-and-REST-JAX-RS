@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-<title>Gestion des Stations</title>
+<title>Gestion des Histogrames des Carburants</title>
 </head>
 <body>
 	<jsp:include page="Index.jsp" />
@@ -28,10 +28,10 @@
 			<caption>
 				<h2>
 					<c:if test="${histoCarb != null}">
-                        Edit Histogram
+                        Editer Histograme
                     </c:if>
 					<c:if test="${histoCarb == null}">
-                        Add New Histogram
+                        Ajouter Nouveau Histograme
                     </c:if>
 				</h2>
 			</caption>

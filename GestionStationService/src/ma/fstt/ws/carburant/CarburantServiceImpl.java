@@ -2,7 +2,6 @@ package ma.fstt.ws.carburant;
 
 import java.util.List;
 
-import javax.inject.Inject;
 import javax.jws.WebService;
 
 import ma.fstt.entities.Carburant;

@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-<title>Gestion des Stations</title>
+<title>Gestion des Carburants</title>
 </head>
 <body>
 	<jsp:include page="Index.jsp" />
@@ -19,20 +19,18 @@
 				<h2>List of Carburants</h2>
 			</caption>
 			<tr>
-				<th>ID</th>
 				<th>Nom</th>
 				<th>Description</th>
 				<th>Actions</th>
 			</tr>
 			<c:forEach var="carburant" items="${listCarburant}">
 				<tr>
-					<td><c:out value="${carburant.carburantId}" /></td>
 					<td><c:out value="${carburant.nom}" /></td>
 					<td><c:out value="${carburant.description}" /></td>
 					<td><a
-						href="/GestionStationClient/carburant?action=edit&id=<c:out value='${carburant.carburantId}' />">Edit</a>
+						href="/GestionStationClient/carburant?action=edit&id=<c:out value='${carburant.carburantId}' />">Editer</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a
-						href="/GestionStationClient/carburant?action=delete&id=<c:out value='${carburant.carburantId}' />">Delete</a></td>
+						href="/GestionStationClient/carburant?action=delete&id=<c:out value='${carburant.carburantId}' />">Supprimer</a></td>
 				</tr>
 			</c:forEach>
 		</table>
