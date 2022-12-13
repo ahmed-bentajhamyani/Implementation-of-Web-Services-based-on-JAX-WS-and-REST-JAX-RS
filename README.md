@@ -10,16 +10,23 @@ This is an implementation of a variety of Web Services based on several architec
 
 ## Table of contents
 [Part 1](#part-1)
+* [Class Diagram](#class-diagram)
+* [Database Schema](#database-schema)
+* [Project Structure](#project-structure)
+* [Dependencies Used in this Project](#dependencies-used-in-this-project)
+* [Connection with the Database](#connection-with-the-database)
 
-[Configuration of WildFly's Datasource](#configuration-of-wildflys-datasource)
+[Part 2](#part-2)
+* [Project Structure](#project-structure-1)
+* [Dependencies Used in this Project](#dependencies-used-in-this-project-1)
 
 [Testing the Application](#testing-the-application)
-* [Etudiants List](#etudiants-list)
-* [Add Etudiant](#add-etudiant)
-* [Update Etudiant](#update-etudiant)
-* [Delete Etudiant](#delete-etudiant)
-
-[Grouping the two projects into an Enterprise Application Projecty](#grouping-the-two-projects-into-an-enterprise-application-project)
+* [Stations List](#stations-list)
+* [Add Station](#add-station)
+* [Fuel List](#fuel-list)
+* [Add Histogram of fuel](#add-histogram-of-fuel)
+* [Histogram of fuel List](#histogram-of-fuel-list)
+* [Compare the price of the two fuel](#compare-the-price-of-the-two-fuel)
 
 ## Part 1
 
@@ -146,7 +153,7 @@ We convert the project to a maven project and we've added in the ```pom.xml``` f
 
 ## Testing the Application
 
-### Station List
+### Stations List
 
 In the list station we have a station "Afriquia" so let's add another station:
 
