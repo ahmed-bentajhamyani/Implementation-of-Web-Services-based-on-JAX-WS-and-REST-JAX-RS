@@ -9,14 +9,14 @@ This is an implementation of a variety of Web Services based on several architec
 **Tools :** Eclipse, Maven, Tomcate, MySQL, JAX-WS, JAX-RS.
 
 ## Table of contents
-[Part 1](#part-1)
+[Implementation of Web Services](#implementation-of-Web-services)
 * [Class Diagram](#class-diagram)
 * [Database Schema](#database-schema)
 * [Project Structure](#project-structure)
 * [Dependencies Used in this Project](#dependencies-used-in-this-project)
 * [Connection with the Database](#connection-with-the-database)
 
-[Part 2](#part-2)
+[Web Services Client](#web-services-client)
 * [Project Structure](#project-structure-1)
 * [Dependencies Used in this Project](#dependencies-used-in-this-project-1)
 
@@ -28,7 +28,7 @@ This is an implementation of a variety of Web Services based on several architec
 * [Histogram of fuel List](#histogram-of-fuel-list)
 * [Compare the price of the two fuel](#compare-the-price-of-the-two-fuel)
 
-## Part 1
+## Implementation of Web Services
 
 ### Class Diagram
 
@@ -110,7 +110,7 @@ To connect to the database we have to add the  ```persistence.xml``` file in ```
 </persistence>
 ```
 
-## Part 2
+## Web Services Client
 
 ### Project Structure
 
